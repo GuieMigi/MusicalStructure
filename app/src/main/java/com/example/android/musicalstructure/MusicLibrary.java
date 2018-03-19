@@ -1,12 +1,18 @@
 package com.example.android.musicalstructure;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MusicLibrary extends AppCompatActivity {
+
+    String artistName, trackTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +44,24 @@ public class MusicLibrary extends AppCompatActivity {
 
         //Create a TrackListAdapter whose data source is a musicTrackList ArrayList.
         TrackListAdapter adapter = new TrackListAdapter(this, musicTrackList);
-        ListView musicLibraryListView = findViewById(R.id.musicLibraryListView);
+        final ListView musicLibraryListView = findViewById(R.id.musicLibraryListView);
         // Make the musicLibraryListView use the TrackListAdapter created above, so that the
         // ListView will display list items for each TrackList in the list.
         musicLibraryListView.setAdapter(adapter);
+
+        //Get the artistName and the trackTitle.
+        TrackList trackList = new TrackList("", "");
+        artistName = trackList.getArtistName();
+        trackTitle = trackList.getTrackTitle();
+
+        musicLibraryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent openTrackDetails = new Intent(MusicLibrary.this, TrackDetails.class);
+                openTrackDetails.putExtra("ARTISTNAME", artistName);
+                openTrackDetails.putExtra("TRACKTITLE", trackTitle);
+                startActivity(openTrackDetails);
+            }
+        });
     }
 }
