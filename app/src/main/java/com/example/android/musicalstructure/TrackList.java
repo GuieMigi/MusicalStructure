@@ -16,9 +16,13 @@ public class TrackList extends AppCompatActivity {
     //Track title.
     String mTrackTitle;
 
-    public TrackList(String artistName, String trackTitle){
+    //Track title.
+    int mAlbumCover;
+
+    public TrackList(String artistName, String trackTitle, int albumCover) {
         mArtistName = artistName;
         mTrackTitle = trackTitle;
+        mAlbumCover = albumCover;
     }
 
     // Get the artist's name.
@@ -26,4 +30,9 @@ public class TrackList extends AppCompatActivity {
 
     // Get the track title.
     public String getTrackTitle(){return mTrackTitle;}
+
+    //Get the album cover.
+    public int getAlbumCover() {
+        return mAlbumCover;
+    }
 }

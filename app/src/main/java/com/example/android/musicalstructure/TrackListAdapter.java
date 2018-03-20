@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -44,6 +45,13 @@ public class TrackListAdapter extends ArrayAdapter<TrackList>{
         // Get the trackTitle from the current Tracklist object and
         // set this text on the trackTitle TextView.
         trackTitleTextView.setText(currentItem.getTrackTitle());
+
+        // Find the ImageView in the list_item.xml layout with the ID albumCoverImageView.
+        ImageView albumCoverImageView = listItemView.findViewById(R.id.albumCoverImageView);
+
+        // Get the albumCover from the current Tracklist object and
+        // set this drawable on the albumCover ImageView.
+        albumCoverImageView.setImageResource(currentItem.getAlbumCover());
 
         return listItemView;
     }
