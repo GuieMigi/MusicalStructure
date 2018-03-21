@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 public class NowPlaying extends AppCompatActivity {
 
-    Boolean isClicked = false;
-    TextView musicLibrary, nowPlayingArtist, nowPlayingTrack;
-    ImageView previousButton, playButton, stopButton, nextButton;
+    private Boolean isClicked = false;
+    private TextView musicLibrary, nowPlayingArtist, nowPlayingTrack;
+    private ImageView previousButton, playButton, stopButton, nextButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
