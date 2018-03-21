@@ -10,34 +10,50 @@ import android.widget.TextView;
 public class NowPlaying extends AppCompatActivity {
 
     private Boolean isClicked = false;
-    private TextView musicLibrary, nowPlayingArtist, nowPlayingTrack;
-    private ImageView previousButton, playButton, stopButton, nextButton;
+    private ImageView playButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.now_playing);
 
-        musicLibrary = findViewById(R.id.musicLibraryTextView);
-        nowPlayingArtist = findViewById(R.id.artistName);
-        nowPlayingTrack = findViewById(R.id.trackTitle);
-        previousButton = findViewById(R.id.previousButton);
-        playButton = findViewById(R.id.playButton);
-        stopButton = findViewById(R.id.stopButton);
-        nextButton = findViewById(R.id.nextButton);
+        Intent getArtistName = getIntent();
+        Intent getTrackTitle = getIntent();
+        Intent getAlbumCover = getIntent();
+        final String artistName = getArtistName.getStringExtra("ARTISTNAME");
+        final String trackTitle = getTrackTitle.getStringExtra("TRACKTITLE");
+        final int albumCover = getAlbumCover.getIntExtra("ALBUMCOVER", 0);
+        TextView artistNameTextView = findViewById(R.id.artistNameTextViewNowPlaying);
+        TextView trackTitleTextView = findViewById(R.id.trackTitleTextViewNowPlaying);
+        ImageView albumCoverImageView = findViewById(R.id.albumCoverImageViewNowPlaying);
+        TextView musicLibrary = findViewById(R.id.musicLibraryTextViewNowPlaying);
+        ImageView previousButton = findViewById(R.id.previousButtonNowPlaying);
+        playButton = findViewById(R.id.playButtonNowPlaying);
+        ImageView stopButton = findViewById(R.id.stopButtonNowPlaying);
+        ImageView nextButton = findViewById(R.id.nextButtonNowPlaying);
 
-        nowPlayingArtist.setOnClickListener(new View.OnClickListener() {
+        artistNameTextView.setText(artistName);
+        trackTitleTextView.setText(trackTitle);
+        albumCoverImageView.setImageResource(albumCover);
+
+        artistNameTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent openTrackDetails = new Intent(NowPlaying.this, TrackDetails.class);
+                openTrackDetails.putExtra("ARTISTNAME", artistName);
+                openTrackDetails.putExtra("TRACKTITLE", trackTitle);
+                openTrackDetails.putExtra("ALBUMCOVER", albumCover);
                 startActivity(openTrackDetails);
             }
         });
 
-        nowPlayingTrack.setOnClickListener(new View.OnClickListener() {
+        trackTitleTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent openTrackDetails = new Intent(NowPlaying.this, TrackDetails.class);
+                openTrackDetails.putExtra("ARTISTNAME", artistName);
+                openTrackDetails.putExtra("TRACKTITLE", trackTitle);
+                openTrackDetails.putExtra("ALBUMCOVER", albumCover);
                 startActivity(openTrackDetails);
             }
         });

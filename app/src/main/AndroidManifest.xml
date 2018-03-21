@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NowPlaying">
+        <activity android:name=".MusicLibrary">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MusicLibrary"
-            android:label="Music Library"/>
+        <activity
+            android:name=".NowPlaying"
+            android:label="Now Playing" />
         <activity android:name=".TrackDetails"
             android:label="Track Details">
         </activity>

@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -18,14 +18,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
-            android:adjustViewBounds="true" />
+            android:adjustViewBounds="true"
+            tools:src="@drawable/armin_van_buuren_blue_fear" />
 
         <TextView
             android:id="@+id/artistNameTextViewTrackDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="bold"
             tools:text="Armin van Buuren" />
 
@@ -35,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:gravity="center"
-            android:textSize="16dp"
+            android:textSize="16sp"
             tools:text="Blue Fear" />
 
         <ImageView
@@ -44,6 +45,15 @@
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:src="@drawable/play_button" />
+
+        <TextView
+            android:id="@+id/musicLibraryTextViewTrackDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:text="Music Library"
+            android:textSize="24sp" />
 
     </LinearLayout>
 

@@ -3,6 +3,7 @@ package com.example.android.musicalstructure;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,15 +16,36 @@ public class TrackDetails extends AppCompatActivity {
         Intent getArtistName = getIntent();
         Intent getTrackTitle = getIntent();
         Intent getAlbumCover = getIntent();
-        String artistName = getArtistName.getStringExtra("ARTISTNAME");
-        String trackTitle = getTrackTitle.getStringExtra("TRACKTITLE");
-        int albumCover = getAlbumCover.getIntExtra("ALBUMCOVER", 0);
+        final String artistName = getArtistName.getStringExtra("ARTISTNAME");
+        final String trackTitle = getTrackTitle.getStringExtra("TRACKTITLE");
+        final int albumCover = getAlbumCover.getIntExtra("ALBUMCOVER", 0);
         TextView artistNameTextView = findViewById(R.id.artistNameTextViewTrackDetails);
         TextView trackTitleTextView = findViewById(R.id.trackTitleTextViewTrackDetails);
+        TextView musicLibrary = findViewById(R.id.musicLibraryTextViewTrackDetails);
         ImageView albumCoverImageView = findViewById(R.id.imageViewTrackDetails);
+        ImageView playButton = findViewById(R.id.playButtonImageViewTrackDetails);
         artistNameTextView.setText(artistName);
         trackTitleTextView.setText(trackTitle);
         albumCoverImageView.setImageResource(albumCover);
 
+        musicLibrary.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will open the MusicLibrary activity when the Music Library TextView is clicked.
+            @Override
+            public void onClick(View view) {
+                Intent openMusicLibrary = new Intent(TrackDetails.this, MusicLibrary.class);
+                startActivity(openMusicLibrary);
+            }
+        });
+
+        playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent openNowPlaying = new Intent(TrackDetails.this, NowPlaying.class);
+                openNowPlaying.putExtra("ARTISTNAME", artistName);
+                openNowPlaying.putExtra("TRACKTITLE", trackTitle);
+                openNowPlaying.putExtra("ALBUMCOVER", albumCover);
+                startActivity(openNowPlaying);
+            }
+        });
     }
 }
