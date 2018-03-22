@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context="com.example.android.musicalstructure.TrackDetails">
 
     <LinearLayout
@@ -34,16 +35,33 @@
             android:id="@+id/trackTitleTextViewTrackDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:gravity="center"
             android:textSize="16sp"
             tools:text="Blue Fear" />
 
+        <TextView
+            android:id="@+id/genreTextViewTrackDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            tools:text="Genre: Trance" />
+
+        <TextView
+            android:id="@+id/launchYearTextViewTrackDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            tools:text="Year: 1997" />
+
         <ImageView
             android:id="@+id/playButtonImageViewTrackDetails"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
             android:src="@drawable/play_button" />
 
         <TextView

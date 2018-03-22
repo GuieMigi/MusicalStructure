@@ -13,20 +13,32 @@ public class TrackDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.track_details);
+
         Intent getArtistName = getIntent();
         Intent getTrackTitle = getIntent();
         Intent getAlbumCover = getIntent();
+        Intent getGenre = getIntent();
+        Intent getLaunchYear = getIntent();
+
         final String artistName = getArtistName.getStringExtra("ARTISTNAME");
         final String trackTitle = getTrackTitle.getStringExtra("TRACKTITLE");
         final int albumCover = getAlbumCover.getIntExtra("ALBUMCOVER", 0);
+        final String genre = getGenre.getStringExtra("GENRE");
+        final String launchYear = getLaunchYear.getStringExtra("LAUNCHYEAR");
+
         TextView artistNameTextView = findViewById(R.id.artistNameTextViewTrackDetails);
         TextView trackTitleTextView = findViewById(R.id.trackTitleTextViewTrackDetails);
+        TextView genreTextView = findViewById(R.id.genreTextViewTrackDetails);
+        TextView launchYearTextView = findViewById(R.id.launchYearTextViewTrackDetails);
         TextView musicLibrary = findViewById(R.id.musicLibraryTextViewTrackDetails);
         ImageView albumCoverImageView = findViewById(R.id.imageViewTrackDetails);
         ImageView playButton = findViewById(R.id.playButtonImageViewTrackDetails);
+
         artistNameTextView.setText(artistName);
         trackTitleTextView.setText(trackTitle);
         albumCoverImageView.setImageResource(albumCover);
+        genreTextView.setText("Genre: " + genre);
+        launchYearTextView.setText("Year: " + launchYear);
 
         musicLibrary.setOnClickListener(new View.OnClickListener() {
             // The code in this method will open the MusicLibrary activity when the Music Library TextView is clicked.

@@ -19,10 +19,18 @@ public class TrackList extends AppCompatActivity {
     //Track title.
     int mAlbumCover;
 
-    public TrackList(String artistName, String trackTitle, int albumCover) {
+    //Track genre.
+    String mGenre;
+
+    //Track launch year.
+    String mLaunchYear;
+
+    public TrackList(String artistName, String trackTitle, int albumCover, String genre, String launchYear) {
         mArtistName = artistName;
         mTrackTitle = trackTitle;
         mAlbumCover = albumCover;
+        mGenre = genre;
+        mLaunchYear = launchYear;
     }
 
     // Get the artist's name.
@@ -34,5 +42,15 @@ public class TrackList extends AppCompatActivity {
     //Get the album cover.
     public int getAlbumCover() {
         return mAlbumCover;
+    }
+
+    //Get the genre.
+    public String getGenre() {
+        return mGenre;
+    }
+
+    //Get the launch year.
+    public String getLaunchYear() {
+        return mLaunchYear;
     }
 }

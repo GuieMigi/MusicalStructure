@@ -79,10 +79,10 @@ public class NowPlaying extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(!isClicked){
-                    playButton.setImageResource(R.drawable.pause_button);
+                    playButton.setImageResource(R.drawable.play_button);
                     isClicked = true;
                 } else if(isClicked){
-                    playButton.setImageResource(R.drawable.play_button);
+                    playButton.setImageResource(R.drawable.pause_button);
                     isClicked = false;
                 }
             }
