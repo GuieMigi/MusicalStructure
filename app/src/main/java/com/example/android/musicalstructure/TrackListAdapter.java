@@ -16,15 +16,17 @@ import java.util.ArrayList;
  * Created by Florin on 14.03.2018.
  */
 
-public class TrackListAdapter extends ArrayAdapter<TrackList>{
+public class TrackListAdapter extends ArrayAdapter<TrackList> {
 
-    public TrackListAdapter(Activity context, ArrayList<TrackList>musicTrackList){super(context, 0, musicTrackList);}
+    public TrackListAdapter(Activity context, ArrayList<TrackList> musicTrackList) {
+        super(context, 0, musicTrackList);
+    }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null){
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }

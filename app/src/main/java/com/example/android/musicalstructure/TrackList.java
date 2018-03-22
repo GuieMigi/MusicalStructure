@@ -34,10 +34,14 @@ public class TrackList extends AppCompatActivity {
     }
 
     // Get the artist's name.
-    public String getArtistName(){return mArtistName;}
+    public String getArtistName() {
+        return mArtistName;
+    }
 
     // Get the track title.
-    public String getTrackTitle(){return mTrackTitle;}
+    public String getTrackTitle() {
+        return mTrackTitle;
+    }
 
     //Get the album cover.
     public int getAlbumCover() {

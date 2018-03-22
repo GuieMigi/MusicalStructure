@@ -63,7 +63,7 @@
                 android:src="@drawable/previous_button" />
 
             <ImageView
-                android:id="@+id/playButtonNowPlaying"
+                android:id="@+id/playPauseButtonNowPlaying"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:src="@drawable/pause_button" />

@@ -12,14 +12,12 @@ import java.util.ArrayList;
 
 public class MusicLibrary extends AppCompatActivity {
 
-    String artistName, trackTitle;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.music_library);
 
-        //Create an ArrayList containing the Artist's name and the track title.
+        //Create an ArrayList containing the Artist Name, Track Title, Album Cover, Genre and Launch Year.
         ArrayList<TrackList> musicTrackList = new ArrayList<TrackList>();
         musicTrackList.add(new TrackList("Above & Beyond feat. Zoe Johnston", "We're All We Need",
                 R.drawable.above_and_beyond_we_are_all_we_need, "Trance", "2015"));
@@ -69,6 +67,8 @@ public class MusicLibrary extends AppCompatActivity {
         // ListView will display list items for each TrackList in the list.
         musicLibraryListView.setAdapter(adapter);
 
+        //onItemClickListener used to get the position of the item clicked in the ListView
+        //and use it to pass the correct information in the Track Details activity.
         musicLibraryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
