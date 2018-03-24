@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Musical Structure</string>
+    <string name="musicLibraryButtonText">Music Library</string>
+    <string name="previousButton">Previous button</string>
+    <string name="playPauseButton">Play/Pause button</string>
+    <string name="stopButton">Stop button</string>
+    <string name="nextButton">Next button</string>
+    <string name="albumCoverNowPlaying">The album cover for the Now Playing track</string>
+    <string name="albumCoverTrackDetails">The album cover for the selected track</string>
 </resources>

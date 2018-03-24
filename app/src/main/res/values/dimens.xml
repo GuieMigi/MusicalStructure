@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="buttonSize">50dp</dimen>
+    <dimen name="leftRightPadding">16dp</dimen>
+    <dimen name="textSize">16sp</dimen>
+    <dimen name="topBottomMargin">8dp</dimen>
+    <dimen name="playPauseButtonSize">70dp</dimen>
+    <dimen name="musicLibraryButtonTextSize">24sp</dimen>
+    <dimen name="bottomMarginTrackDetails">16dp</dimen>
+    <dimen name="playButtonSizeTrackDetails">60dp</dimen>
 </resources>

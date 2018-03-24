@@ -11,15 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/leftRightPadding">
 
         <ImageView
             android:id="@+id/imageViewTrackDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/bottomMarginTrackDetails"
             android:adjustViewBounds="true"
+            android:contentDescription="@string/albumCoverTrackDetails"
             tools:src="@drawable/armin_van_buuren_blue_fear" />
 
         <TextView
@@ -27,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="16sp"
+            android:textSize="@dimen/textSize"
             android:textStyle="bold"
             tools:text="Armin van Buuren" />
 
@@ -36,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="16sp"
+            android:textSize="@dimen/textSize"
             tools:text="Blue Fear" />
 
         <TextView
@@ -44,34 +45,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="16sp"
+            android:textSize="@dimen/textSize"
             tools:text="Genre: Trance" />
 
         <TextView
             android:id="@+id/launchYearTextViewTrackDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/bottomMarginTrackDetails"
             android:gravity="center"
-            android:textSize="16sp"
+            android:textSize="@dimen/textSize"
             tools:text="Year: 1997" />
 
         <ImageView
             android:id="@+id/playButtonImageViewTrackDetails"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/playButtonSizeTrackDetails"
+            android:layout_height="@dimen/playButtonSizeTrackDetails"
             android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/bottomMarginTrackDetails"
+            android:contentDescription="@string/playPauseButton"
             android:src="@drawable/play_button" />
-
-        <TextView
-            android:id="@+id/musicLibraryTextViewTrackDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
-            android:text="Music Library"
-            android:textSize="24sp" />
 
     </LinearLayout>
 

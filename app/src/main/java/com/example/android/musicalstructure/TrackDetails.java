@@ -33,7 +33,6 @@ public class TrackDetails extends AppCompatActivity {
         TextView trackTitleTextView = findViewById(R.id.trackTitleTextViewTrackDetails);
         TextView genreTextView = findViewById(R.id.genreTextViewTrackDetails);
         TextView launchYearTextView = findViewById(R.id.launchYearTextViewTrackDetails);
-        TextView musicLibrary = findViewById(R.id.musicLibraryTextViewTrackDetails);
         ImageView albumCoverImageView = findViewById(R.id.imageViewTrackDetails);
         ImageView playButton = findViewById(R.id.playButtonImageViewTrackDetails);
 
@@ -43,16 +42,6 @@ public class TrackDetails extends AppCompatActivity {
         albumCoverImageView.setImageResource(albumCover);
         genreTextView.setText("Genre: " + genre);
         launchYearTextView.setText("Year: " + launchYear);
-
-        //onClickListener that opens the Music Library when the Music Library TextView is clicked.
-        musicLibrary.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will open the MusicLibrary activity when the Music Library TextView is clicked.
-            @Override
-            public void onClick(View view) {
-                Intent openMusicLibrary = new Intent(TrackDetails.this, MusicLibrary.class);
-                startActivity(openMusicLibrary);
-            }
-        });
 
         //onClickListener that opens the Now Playing activity when the Play Button is clicked.
         //Passes the Artist Name, Track Title, Album Cover, Genre and Launch Year using Intent.

@@ -17,6 +17,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:contentDescription="@string/albumCoverNowPlaying"
             android:scaleType="centerCrop"
             tools:src="@drawable/above_and_beyond_we_are_all_we_need" />
 
@@ -26,12 +27,12 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:paddingBottom="4dp"
-            android:paddingEnd="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingStart="16dp"
-            android:paddingTop="8dp"
-            android:textSize="16sp"
+            android:paddingEnd="@dimen/leftRightPadding"
+            android:paddingLeft="@dimen/leftRightPadding"
+            android:paddingRight="@dimen/leftRightPadding"
+            android:paddingStart="@dimen/leftRightPadding"
+            android:paddingTop="@dimen/topBottomMargin"
+            android:textSize="@dimen/textSize"
             android:textStyle="bold"
             tools:text="Above &amp; Beyond feat. Zoe Johnston" />
 
@@ -40,19 +41,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="8dp"
-            android:paddingEnd="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingStart="16dp"
-            android:textSize="16sp"
+            android:paddingBottom="@dimen/topBottomMargin"
+            android:paddingEnd="@dimen/leftRightPadding"
+            android:paddingLeft="@dimen/leftRightPadding"
+            android:paddingRight="@dimen/leftRightPadding"
+            android:paddingStart="@dimen/leftRightPadding"
+            android:textSize="@dimen/textSize"
             tools:text="We're All We Need" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/topBottomMargin"
             android:orientation="horizontal">
 
             <ImageView
@@ -60,12 +61,14 @@
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:layout_gravity="center_vertical"
+                android:contentDescription="@string/previousButton"
                 android:src="@drawable/previous_button" />
 
             <ImageView
                 android:id="@+id/playPauseButtonNowPlaying"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="@dimen/playPauseButtonSize"
+                android:layout_height="@dimen/playPauseButtonSize"
+                android:contentDescription="@string/playPauseButton"
                 android:src="@drawable/pause_button" />
 
             <ImageView
@@ -73,6 +76,7 @@
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:layout_gravity="center_vertical"
+                android:contentDescription="@string/stopButton"
                 android:src="@drawable/stop_button" />
 
             <ImageView
@@ -80,6 +84,7 @@
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
                 android:layout_gravity="center_vertical"
+                android:contentDescription="@string/nextButton"
                 android:src="@drawable/next_button" />
 
         </LinearLayout>
@@ -89,9 +94,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
-            android:text="Music Library"
-            android:textSize="24sp" />
+            android:layout_marginBottom="@dimen/leftRightPadding"
+            android:text="@string/musicLibraryButtonText"
+            android:textSize="@dimen/musicLibraryButtonTextSize" />
 
     </LinearLayout>
 
