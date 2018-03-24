@@ -8,4 +8,28 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="nowPlayingTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingEnd">@dimen/leftRightPadding</item>
+        <item name="android:paddingLeft">@dimen/leftRightPadding</item>
+        <item name="android:paddingRight">@dimen/leftRightPadding</item>
+        <item name="android:paddingStart">@dimen/leftRightPadding</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
+
+    <style name="playerButtonImageView">
+        <item name="android:layout_width">@dimen/buttonSize</item>
+        <item name="android:layout_height">@dimen/buttonSize</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="trackDetailsTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textSize</item>
+    </style>
+
 </resources>

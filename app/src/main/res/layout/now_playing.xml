@@ -23,30 +23,15 @@
 
         <TextView
             android:id="@+id/artistNameTextViewNowPlaying"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingBottom="4dp"
-            android:paddingEnd="@dimen/leftRightPadding"
-            android:paddingLeft="@dimen/leftRightPadding"
-            android:paddingRight="@dimen/leftRightPadding"
-            android:paddingStart="@dimen/leftRightPadding"
+            style="@style/nowPlayingTextView"
             android:paddingTop="@dimen/topBottomMargin"
-            android:textSize="@dimen/textSize"
             android:textStyle="bold"
             tools:text="Above &amp; Beyond feat. Zoe Johnston" />
 
         <TextView
             android:id="@+id/trackTitleTextViewNowPlaying"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            style="@style/nowPlayingTextView"
             android:paddingBottom="@dimen/topBottomMargin"
-            android:paddingEnd="@dimen/leftRightPadding"
-            android:paddingLeft="@dimen/leftRightPadding"
-            android:paddingRight="@dimen/leftRightPadding"
-            android:paddingStart="@dimen/leftRightPadding"
-            android:textSize="@dimen/textSize"
             tools:text="We're All We Need" />
 
         <LinearLayout
@@ -58,9 +43,7 @@
 
             <ImageView
                 android:id="@+id/previousButtonNowPlaying"
-                android:layout_width="@dimen/buttonSize"
-                android:layout_height="@dimen/buttonSize"
-                android:layout_gravity="center_vertical"
+                style="@style/playerButtonImageView"
                 android:contentDescription="@string/previousButton"
                 android:src="@drawable/previous_button" />
 
@@ -73,17 +56,13 @@
 
             <ImageView
                 android:id="@+id/stopButtonNowPlaying"
-                android:layout_width="@dimen/buttonSize"
-                android:layout_height="@dimen/buttonSize"
-                android:layout_gravity="center_vertical"
+                style="@style/playerButtonImageView"
                 android:contentDescription="@string/stopButton"
                 android:src="@drawable/stop_button" />
 
             <ImageView
                 android:id="@+id/nextButtonNowPlaying"
-                android:layout_width="@dimen/buttonSize"
-                android:layout_height="@dimen/buttonSize"
-                android:layout_gravity="center_vertical"
+                style="@style/playerButtonImageView"
                 android:contentDescription="@string/nextButton"
                 android:src="@drawable/next_button" />
 

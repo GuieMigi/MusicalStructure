@@ -25,36 +25,24 @@
 
         <TextView
             android:id="@+id/artistNameTextViewTrackDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="@dimen/textSize"
+            style="@style/trackDetailsTextView"
             android:textStyle="bold"
             tools:text="Armin van Buuren" />
 
         <TextView
             android:id="@+id/trackTitleTextViewTrackDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="@dimen/textSize"
+            style="@style/trackDetailsTextView"
             tools:text="Blue Fear" />
 
         <TextView
             android:id="@+id/genreTextViewTrackDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="@dimen/textSize"
+            style="@style/trackDetailsTextView"
             tools:text="Genre: Trance" />
 
         <TextView
             android:id="@+id/launchYearTextViewTrackDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/trackDetailsTextView"
             android:layout_marginBottom="@dimen/bottomMarginTrackDetails"
-            android:gravity="center"
-            android:textSize="@dimen/textSize"
             tools:text="Year: 1997" />
 
         <ImageView

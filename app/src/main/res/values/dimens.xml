@@ -8,4 +8,5 @@
     <dimen name="musicLibraryButtonTextSize">24sp</dimen>
     <dimen name="bottomMarginTrackDetails">16dp</dimen>
     <dimen name="playButtonSizeTrackDetails">60dp</dimen>
+    <dimen name="musicLibraryImageViewSize">50dp</dimen>
 </resources>
